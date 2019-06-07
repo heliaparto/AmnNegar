@@ -1,0 +1,11 @@
+@media all and (orientation: portrait){
+    .mainCover{
+        height: 40vh;
+    }
+    .MainFirstSection_inside{
+        height: 40vh;
+    }
+    .motto_pic{
+        height: 20vh;
+    }
+}
