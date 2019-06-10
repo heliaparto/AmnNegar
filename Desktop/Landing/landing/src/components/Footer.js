@@ -3,6 +3,13 @@ import fb from "../images/facebook.png";
 import twitter from "../images/twitter.png";
 import telegram from "../images/telegram.png";
 import React from "react";
+import {
+    Link,
+    Redirect
+} from "react-router-dom";
+import '../App.css';
+import '../styles/ContactStyle.css';
+
 
 export default class Footer extends React.Component {
     render () {
@@ -16,10 +23,10 @@ export default class Footer extends React.Component {
         </div>
 
         <div className='socialMedia'>
-            <img alt='Instagram' src={insta} className='socialMediaIcons'/>
-            <img alt='Facebook' src={fb} className='socialMediaIcons'/>
-            <img alt='Twitter' src={twitter} className='socialMediaIcons'/>
-            <img alt='Telegram' src={telegram} className='socialMediaIcons'/>
+            <a href="https://instagram.com/ordibahar_andishe?igshid=13hzlrqfo5idid"><img  alt='Instagram' src={insta} className='socialMediaIcons'/></a>
+            <a href="https://facebook.com"><img alt='Facebook' src={fb} className='socialMediaIcons'/></a>
+            {/*<a href="google.com"><img alt='Twitter' src={twitter} className='socialMediaIcons'/></a>*/}
+            <a href="https://web.telegram.org/#/im?p=@ordibahar_andishe"><img alt='Telegram' src={telegram} className='socialMediaIcons'/></a>
         </div>
     </div>
 
@@ -29,10 +36,10 @@ export default class Footer extends React.Component {
         </div>
 
         <div className='footer_box_text'>
-            <p>آدرس</p>
-            <p>تلفن</p>
-            <p>فکس</p>
-            <p>ایمیل</p>
+            <p><Link className='footer_contact-link' to='/contactUs'>آدرس</Link></p>
+            <p><Link className='footer_contact-link' to='/contactUs'>ایمیل</Link></p>
+            <p><Link className='footer_contact-link' to='/contactUs'>تلفن</Link></p>
+            <p><Link className='footer_contact-link' to='/contactUs'>فکس</Link></p>
         </div>
     </div>
 
@@ -42,10 +49,10 @@ export default class Footer extends React.Component {
         </div>
 
         <div className='footer_box_text'>
-            <p>اخبار</p>
-            <p>منابع</p>
-            <p>تست ها</p>
-            <p>تالار گفتمان</p>
+            <p><Link className='footer_contact-link' to='/news'>اخبار</Link></p>
+            <p><Link className='footer_contact-link' to='/references'>منابع </Link></p>
+            <p><Link className='footer_contact-link' to='/CharacterAnalysis'>شخصیت شناسی</Link></p>
+            <p><Link className='footer_contact-link' to='/underconstruction'>تالار گفتمان</Link></p>
         </div>
     </div>
 

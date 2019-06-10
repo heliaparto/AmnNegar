@@ -4,6 +4,11 @@ import logo from '../images/bahar.png';
 import mainCover from '../images/BackGround.jpg';
 import Footer from './Footer'
 import motto from '../images/motto.png';
+import Header from './header'
+import {
+  Link,
+  Redirect
+} from "react-router-dom";
 
 
 
@@ -13,24 +18,9 @@ export default class LandingPage extends React.Component {
 
     return(
       <div className='container'>
-{/*1*/}
-          <div className='header'>{/*1--header*/}
-            <div className='headerLeftPart'>{/*1--logo*/}
-              <img className='logoOfLandingPage' src={logo}/>
-            </div>
-
-            <div className='headerRightPart'>{/*2--contact*/}
+        <Header/>
 
 
-              <div className='headerRightPart_secondSection'>
-                <span className='headerRightPart_secondSection_items'>909-111-111</span>
-                <span className='headerRightPart_secondSection_items'>تماس با ما</span>
-                <span className='headerRightPart_secondSection_items'>مشاوره تحصیلی</span>
-
-
-              </div>
-            </div>
-          </div>
 {/*2*/}
           <div className='MainFirstSection'>
             <div className='MainFirstSection_inside'>
@@ -46,6 +36,17 @@ export default class LandingPage extends React.Component {
           </div>
 {/*3*/}
           <div className='MainSecondSection'>
+            <div className='box_titles'><p>اردیبهار چیست؟</p></div>
+            <div className='box_text'>
+              <p>
+                یه چیز خودمونی تر
+              </p>
+            </div>
+            <div className='box_button '>
+              <button className='Morebutton wide'>
+                <Link className='link_text' to='/introduction'>بیشتر بخوانید</Link>
+              </button>
+            </div>
 
 
           </div>
@@ -68,14 +69,15 @@ export default class LandingPage extends React.Component {
               </div>
 
               <div className='box_button'>
-                <button className='Morebutton' >بیشتر بخوانید
+                <button className='Morebutton'>
+                  <Link className='link_text' to='/CharacterAnalysis'>بیشتر بخوانید</Link>
                 </button>
               </div>
             </div>
 
             <div className='MainSecondSection_boxes'>{/*2*/}
               <div className='box_titles'>
-                <p>به منابع دسترسی داشته باش</p>
+                <p>منابع رو بشناس</p>
               </div>
 
               <div className='box_text'>
@@ -83,7 +85,8 @@ export default class LandingPage extends React.Component {
               </div>
 
               <div className='box_button'>
-                <button className='Morebutton'>بیشتر بخوانید
+                <button className='Morebutton'>
+                  <Link className='link_text' to='/references'>بیشتر بخوانید</Link>
                 </button>
               </div>
             </div>
@@ -98,7 +101,8 @@ export default class LandingPage extends React.Component {
               </div>
 
               <div className='box_button'>
-                <button className='Morebutton'>بیشتر بخوانید
+                <button className='Morebutton'>
+                  <Link className='link_text' to='/underconstruction'>بیشتر بخوانید</Link>
                 </button>
               </div>
 
@@ -114,7 +118,8 @@ export default class LandingPage extends React.Component {
               </div>
 
               <div className='box_button'>
-                <button className='Morebutton'>بیشتر بخوانید
+                <button className='Morebutton'>
+                  <Link className='link_text' to='/news'>بیشتر بخوانید</Link>
                 </button>
               </div>
 

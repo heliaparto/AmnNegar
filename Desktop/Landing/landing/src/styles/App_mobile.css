@@ -8,4 +8,8 @@
     .motto_pic{
         height: 20vh;
     }
+    .headerRightPart_secondSection_items{
+        padding-right: 15px;
+        font-size: 14.8px;
+    }
 }
